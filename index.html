@@ -2,24 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/repository-name/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Miguel Pineda - Portfolio</title>
+    <!-- Inline critical CSS to avoid FOUC -->
+    <link rel="stylesheet" href="./assets/critical.css">
+    <!-- Pre-connect to increase load speed -->
+    <link rel="preconnect" href="https://mundzuk-uldin.github.io">
     <script>
-      // GitHub Pages SPA redirect
+      // Redirect handling for GitHub Pages SPA
       (function() {
         const redirect = sessionStorage.getItem('redirect');
         if (redirect && redirect !== location.pathname) {
           sessionStorage.removeItem('redirect');
-          const repoName = location.pathname.split('/')[1];
-          history.replaceState(null, null, '/' + repoName + '/' + redirect);
+          history.replaceState(null, null, redirect);
         }
       })();
+      
+      // Add fallback for script loading failures
+      window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK') {
+          console.error('Resource failed to load:', e.target.src || e.target.href);
+          
+          // Only show the fallback if the main script failed
+          if (e.target.src && e.target.src.includes('index-')) {
+            document.getElementById('root').innerHTML = `
+              <div class="loading-message">
+                <div class="loading-spinner"></div>
+                <h1>Loading failed</h1>
+                <p>Please try refreshing the page or clearing your cache.</p>
+              </div>
+            `;
+          }
+        }
+      }, true);
     </script>
-    <script type="module" crossorigin src="/repository-name/assets/index-242cTted.js"></script>
-    <link rel="stylesheet" crossorigin href="/repository-name/assets/index-COVQhQwL.css">
+    <script type="module" crossorigin src="/my-portfolio-website/assets/index.BFQttHCj.js"></script>
+    <link rel="stylesheet" crossorigin href="/my-portfolio-website/assets/index.CtY4kNBH.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback loading state -->
+      <div class="loading-message">
+        <div class="loading-spinner"></div>
+        <h1>Loading Portfolio</h1>
+        <p>Please wait while the content loads...</p>
+      </div>
+    </div>
   </body>
 </html>
