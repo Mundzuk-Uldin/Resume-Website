@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yourusername.github.io/repository-name",
+  "homepage": "https://mundzuk-uldin.github.io/Resume-Website/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

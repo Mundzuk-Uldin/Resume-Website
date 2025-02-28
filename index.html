@@ -5,6 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <script>
+      // GitHub Pages SPA redirect
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect !== location.pathname) {
+          sessionStorage.removeItem('redirect');
+          const repoName = location.pathname.split('/')[1];
+          history.replaceState(null, null, '/' + repoName + '/' + redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
