@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages 404 workaround for SPAs
+    // Store the path segment (after the repository name) in session storage
+    const pathSegmentsToKeep = 0;
+    
+    const location = window.location;
+    const l = location.pathname.split('/').filter(p => p);
+    const repoName = l.shift(); // This is your repository name
+    sessionStorage.setItem('redirect', l.join('/'));
+    
+    // Redirect to the index page
+    location.href = location.origin + '/' + repoName;
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+</body>
+</html>

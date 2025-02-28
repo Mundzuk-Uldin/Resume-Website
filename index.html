@@ -2,11 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/repository-name/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-242cTted.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-COVQhQwL.css">
+    <script>
+      // GitHub Pages SPA redirect
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect && redirect !== location.pathname) {
+          sessionStorage.removeItem('redirect');
+          const repoName = location.pathname.split('/')[1];
+          history.replaceState(null, null, '/' + repoName + '/' + redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/repository-name/assets/index-242cTted.js"></script>
+    <link rel="stylesheet" crossorigin href="/repository-name/assets/index-COVQhQwL.css">
   </head>
   <body>
     <div id="root"></div>
