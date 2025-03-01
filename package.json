@@ -6,8 +6,7 @@
   "homepage": "https://github.com/Mundzuk-Uldin/Resume-Website",
   "scripts": {
     "dev": "vite",
-    "build": "remix vite:build",
-    "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

@@ -401,7 +401,7 @@ const ResumeWebsite = () => {
                 
                 {/* Animated glowing orb */}
                 <div className="w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-tr from-teal-500/20 to-purple-500/20 backdrop-blur-sm flex items-center justify-center text-white text-6xl font-bold animate-pulse-slow">
-                  <span className="animate-float z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-400">MAP</span>
+                  <span className="animate-float z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-400">MAPE</span>
                 </div>
                 
                 {/* Light flare effect */}
