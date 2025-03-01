@@ -2,7 +2,6 @@
 
 A modern, interactive resume website with a unique cyberpunk aesthetic and impressive animations, designed to showcase professional experience, projects, and skills.
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
 
 ## 🔗 Live Demo
 
@@ -24,4 +23,3 @@ A modern, interactive resume website with a unique cyberpunk aesthetic and impre
 
 Miguel Pineda - [mpine095@fiu.edu](mailto:mpine095@fiu.edu)
 
-Project Link: [https://github.com/yourusername/portfolio-website](https://github.com/yourusername/portfolio-website)
