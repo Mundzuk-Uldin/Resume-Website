@@ -98,7 +98,7 @@ const ResumeWebsite = () => {
         ctx.fillText(char, i * fontSize, drops[i]);
         
         // Move the drop down
-        drops[i] += Math.random() * 6 + 3;
+        drops[i] += Math.random() * 70+ 70;
         
         // If the drop reaches the bottom, reset it to the top
         if (drops[i] > canvas.height) {
@@ -117,7 +117,7 @@ const ResumeWebsite = () => {
       clearInterval(rainInterval);
       setShowBinaryRain(false);
       setIntroComplete(true);
-    }, 4000);
+    }, 700);
     
     return () => {
       clearInterval(rainInterval);
