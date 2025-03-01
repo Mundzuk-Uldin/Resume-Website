@@ -234,7 +234,7 @@ const ResumeWebsite = () => {
         <div className="relative z-10 text-center text-white">
           <div className="mb-4">
             <h1 className="text-4xl font-extrabold animate-pulse">Miguel Pineda</h1>
-            <p className="text-xl mt-2 animate-fadeIn">Portfolio Loading</p>
+            <p className="text-xl mt-2 animate-fadeIn">Developing the future</p>
           </div>
           <div className="w-40 h-1 bg-teal-500 mx-auto relative overflow-hidden">
             <div className="absolute top-0 left-0 h-full bg-white animate-loadingBar"></div>
