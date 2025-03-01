@@ -1,12 +1,27 @@
-# React + Vite
+# Miguel Pineda's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive resume website with a unique cyberpunk aesthetic and impressive animations, designed to showcase professional experience, projects, and skills.
 
-Currently, two official plugins are available:
+![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+[View Live Site](https://mundzuk-uldin.github.io/Resume-Website/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+## 🛠️ Technologies Used
+
+- **React** - Component-based UI structure
+- **Vite** - Next generation frontend tooling
+- **Tailwind CSS** - Utility-first CSS framework
+- **JavaScript** - ES6+ features for animations and interactivity
+- **Canvas API** - For the binary rain animation
+- **Intersection Observer API** - For scroll-triggered animations
+
+
+## 📬 Contact
+
+Miguel Pineda - [mpine095@fiu.edu](mailto:mpine095@fiu.edu)
+
+Project Link: [https://github.com/yourusername/portfolio-website](https://github.com/yourusername/portfolio-website)
