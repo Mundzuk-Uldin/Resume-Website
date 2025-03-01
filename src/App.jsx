@@ -112,7 +112,7 @@ const ResumeWebsite = () => {
     
     const rainInterval = setInterval(draw, 60);
     
-    // End animation after 4 seconds
+    // End animation
     const endAnimation = setTimeout(() => {
       clearInterval(rainInterval);
       setShowBinaryRain(false);
