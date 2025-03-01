@@ -1,6 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const ResumeWebsite = () => {
+  // Add CSS to prevent overflow issues
+  React.useEffect(() => {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = '100%';
+    document.body.style.overflowY = 'auto';
+    document.body.style.overflowX = 'hidden';
+    
+    return () => {
+      document.body.style.margin = '';
+      document.body.style.padding = '';
+      document.body.style.overflow = '';
+      document.body.style.width = '';
+      document.body.style.overflowY = '';
+      document.body.style.overflowX = '';
+    };
+  }, []);
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showBinaryRain, setShowBinaryRain] = useState(true);
@@ -208,10 +226,10 @@ const ResumeWebsite = () => {
 
   if (showBinaryRain) {
     return (
-      <div className="fixed inset-0 bg-[#000518] flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-[#000518] flex items-center justify-center z-50 w-full overflow-hidden">
         <canvas 
           ref={binaryRainCanvasRef} 
-          className="absolute inset-0"
+          className="absolute inset-0 w-full h-full"
         ></canvas>
         <div className="relative z-10 text-center text-white">
           <div className="mb-4">
@@ -227,9 +245,9 @@ const ResumeWebsite = () => {
   }
 
   return (
-    <div className="font-sans antialiased bg-[#060818] text-gray-100 selection:bg-teal-400 selection:text-gray-900">
+    <div className="font-sans antialiased bg-[#060818] text-gray-100 selection:bg-teal-400 selection:text-gray-900 w-full overflow-x-hidden">
       {/* Particle background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 w-full">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3N2Zz4=')] bg-[20px_20px]"></div>
       </div>
 
@@ -307,16 +325,16 @@ const ResumeWebsite = () => {
       {/* Hero Section */}
       <section 
         id="home" 
-        className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+        className="relative min-h-screen flex items-center pt-16 overflow-hidden w-full"
       >
         {/* Hero Background Elements */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 w-full">
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#0f1025] via-[#121638] to-[#0a0e2a] opacity-100"></div>
           
           {/* Gradient orbs/blobs */}
-          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-purple-600/20 filter blur-[80px] animate-float opacity-70"></div>
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-teal-600/20 filter blur-[60px] animate-float-delay opacity-70"></div>
+          <div className="absolute -top-40 right-0 w-96 h-96 rounded-full bg-purple-600/20 filter blur-[80px] animate-float opacity-70"></div>
+          <div className="absolute -bottom-20 left-0 w-80 h-80 rounded-full bg-teal-600/20 filter blur-[60px] animate-float-delay opacity-70"></div>
           
           {/* Grid pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDc5LCAyMDksIDE5NywgMC4xKSI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjwvZz48L3N2Zz4=')] bg-[60px_60px] opacity-30"></div>
@@ -383,7 +401,7 @@ const ResumeWebsite = () => {
                 
                 {/* Animated glowing orb */}
                 <div className="w-64 h-64 md:w-72 md:h-72 rounded-full bg-gradient-to-tr from-teal-500/20 to-purple-500/20 backdrop-blur-sm flex items-center justify-center text-white text-6xl font-bold animate-pulse-slow">
-                  <span className="animate-float z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-400">MAPE</span>
+                  <span className="animate-float z-10 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-400">MAP</span>
                 </div>
                 
                 {/* Light flare effect */}
@@ -986,6 +1004,21 @@ const ResumeWebsite = () => {
 
       {/* Add global styles for animations */}
       <style jsx global>{`
+        html, body {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          width: 100%;
+        }
+        
+        body {
+          max-width: 100vw;
+        }
+        
+        #root {
+          width: 100%;
+          overflow-x: hidden;
+        }
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-15px); }
