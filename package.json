@@ -6,7 +6,7 @@
   "homepage": "https://yourusername.github.io/repository-name",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "remix vite:build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
